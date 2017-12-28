@@ -21,9 +21,4 @@ class Migration(migrations.Migration):
             model_name='eventregistrypost',
             name='tags',
         ),
-        migrations.AddField(
-            model_name='eventregistrypost',
-            name='tags',
-            field=models.CharField(default='FakeNews', max_length=250),
-        ),
     ]
