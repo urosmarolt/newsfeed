@@ -11,3 +11,14 @@ class Migration(migrations.Migration):
         ('newsfeed', '0010_auto_20171208_1909'),
     ]
 
+    operations = [
+        migrations.RemoveField(
+            model_name='eventregistrypost',
+            name='tags',
+        ),
+        migrations.AddField(
+            model_name='eventregistrypost',
+            name='tags',
+            field=models.CharField(default='FakeNews', max_length=250),
+        ),
+    ]
