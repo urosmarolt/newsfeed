@@ -11,14 +11,3 @@ class Migration(migrations.Migration):
         ('newsfeed', '0010_auto_20171208_1909'),
     ]
 
-    operations = [
-        migrations.AlterField(
-            model_name='eventregistrypost',
-            name='created_at',
-            field=models.DateTimeField(default='2017-12-13 19:47:32', max_length=150),
-        ),
-        migrations.RemoveField(
-            model_name='eventregistrypost',
-            name='tags',
-        ),
-    ]
