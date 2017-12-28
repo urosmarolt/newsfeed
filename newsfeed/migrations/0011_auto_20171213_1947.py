@@ -12,9 +12,10 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
+        migrations.AlterField(
             model_name='eventregistrypost',
-            name='tags',
+            name='created_at',
+            field=models.DateTimeField(default='2017-12-13 19:47:32', max_length=150),
         ),
         migrations.AddField(
             model_name='eventregistrypost',
