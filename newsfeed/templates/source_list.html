@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Content Column -->
+<div class="col-md-8">
+    <ul class="list-group">
+        {% for source in sources %}
+            <a href="/source/{{ source.source_id }}"><li class="list-group-item">{{ source.source_title }}<span class="badge">{{ source.source_title__count }}</span></li></a>
+        {% endfor %}
+    </ul>
+</div>
+<!-- End Content Column -->
+{% endblock %}

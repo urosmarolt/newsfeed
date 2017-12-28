@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block breadcrumbs %}{% endblock %}
+{% block content %}
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="medium text-primary">{{ post_detail.title |safe }}
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">{{ post_detail.title |safe }}</li>
+        </ol>
+    </div>
+</div>
+<!-- End Page Heading/Breadcrumbs -->
+{% block left_sidebar %}
+    {% include "left_sidebar.html" %}
+{% endblock %}
+
+{% endblock %}
+{% block right_sidebar %}{% endblock %}

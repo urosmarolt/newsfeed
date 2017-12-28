@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+        <!-- Blog Post -->
+        <div class="col-md-8">
+        {% for post in posts %}
+                <h2 class="medium">
+                    <a href="{{ post.url }}" target="_blank" rel="nofollow, noindex">{{ post.title }}</a>
+                </h2>
+
+                <p><span class="glyphicon glyphicon-time"></span> Posted on {{ post.created_at }}
+                    <span class="source">( source <a href="/source/{{ post.source_id }}">{{ post.source_title }}</a> )</span>
+                </p>
+                {% if post.image %}
+                    <img src="{{ post.image }}" class="pull-left gap-right align-top-right" width="100px" height="100px" />
+                {% else %}
+                    <img src="/static/images/defaultThumb.png" class="pull-left gap-right align-top-right" width="100px" />
+                {% endif %}
+                <hr class="line-align-left">
+                <p class="newsExtract">{{ post.body|truncatewords:65 }}</p>
+                {% if post.slug %}
+                    <a class="btn btn-primary" href="{{ post.slug }}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                {% else %}
+                    <a class="btn btn-primary" href="{{ post.url }}" target="_blank" rel="nofollow, noindex">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                {% endif %}
+
+                <hr class="hr-double" />
+        {% endfor %}
+        <!-- Pagination -->
+        {% if is_paginated %}
+            <nav>
+                <ul class="pagination">
+                   {% if page_obj.has_previous %}
+                        <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&laquo;</span></li>
+                    {% endif %}
+
+                   {% if show_first %}
+                       <li><span class="page"><a href="?page=1">1</a></span>
+                      <span class="ellipsis">...</span> </li>
+                   {% endif %}
+                   {% for linkpage in page_numbers %}
+                      {% ifequal linkpage page_obj.number %}
+                        <li class="active"><span class="active">{{ page_obj.number }}</span></li>
+                      {% else %}
+                     <li><a href="?page={{ linkpage }}">{{ linkpage }}</a></li>
+                      {% endifequal %}
+                   {% endfor %}
+                   {% if page_obj.paginator.num_pages and page_obj.number != page_obj.paginator.num_pages %}
+                       <li><span class="ellipsis">...</span>
+                      <span class="page"><a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a></span> </li>
+                   {% endif %}
+                   {% if page_obj.has_next%}
+                        <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="disabled"><span>&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+        <!-- End Pagination -->
+        <!-- End Blog Post-->
+        </div>
+{% endblock %}
