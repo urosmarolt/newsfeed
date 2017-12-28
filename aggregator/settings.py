@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'newsfeed',
     'constance',
     'sitetree',
-    'taggit',
 ]
 
 if DJANGO_MODE == 'local':
@@ -140,7 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #Taggit
-TAGGIT_CASE_INSENSITIVE = True
+#TAGGIT_CASE_INSENSITIVE = True
 
 
 # Internationalization

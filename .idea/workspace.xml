@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5415d9eb-7fc5-42c4-95cb-9d000a4d4145" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/runtime.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/uwsgi.ini" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/aggregator/requirements/base.txt" afterPath="$PROJECT_DIR$/requirements/base.txt" />
-      <change beforePath="$PROJECT_DIR$/aggregator/requirements/local.txt" afterPath="$PROJECT_DIR$/requirements/local.txt" />
-      <change beforePath="$PROJECT_DIR$/aggregator/requirements/production.txt" afterPath="$PROJECT_DIR$/requirements/production.txt" />
-      <change beforePath="$PROJECT_DIR$/aggregator/requirements/staging.txt" afterPath="$PROJECT_DIR$/requirements/staging.txt" />
+      <change beforePath="$PROJECT_DIR$/aggregator/settings.py" afterPath="$PROJECT_DIR$/aggregator/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aggregator/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2066">
-              <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+            <state relative-caret-position="1758">
+              <caret line="140" column="7" lean-forward="true" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -67,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newsfeed/tests/test_views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -94,6 +86,7 @@
       <find>&quot;</find>
       <find>posts.paginator</find>
       <find>us</find>
+      <find>tagg</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -122,7 +115,6 @@
         <option value="$PROJECT_DIR$/aggregator/news_scraper.py" />
         <option value="$PROJECT_DIR$/newsfeed/views.py" />
         <option value="$PROJECT_DIR$/newsfeed/templates/posts.html" />
-        <option value="$PROJECT_DIR$/aggregator/settings.py" />
         <option value="$PROJECT_DIR$/aggregator/requirements/base.txt" />
         <option value="$PROJECT_DIR$/aggregator/requirements/local.txt" />
         <option value="$PROJECT_DIR$/aggregator/requirements/staging.txt" />
@@ -133,6 +125,7 @@
         <option value="$PROJECT_DIR$/newsfeed/tests/test_models.py" />
         <option value="$PROJECT_DIR$/newsfeed/tests/test_views.py" />
         <option value="$PROJECT_DIR$/aggregator/.gitignore" />
+        <option value="$PROJECT_DIR$/aggregator/settings.py" />
       </list>
     </option>
   </component>
@@ -289,10 +282,10 @@
         <state relative-caret-position="150">
           <caret line="10" column="88" lean-forward="false" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
           <folding>
-            <element signature="e#1724#1731#1" expanded="true" />
-            <element signature="e#1823#1830#1" expanded="true" />
-            <element signature="e#2948#2955#1" expanded="true" />
-            <element signature="e#3047#3054#1" expanded="true" />
+            <element signature="e#1724#1731#1" expanded="false" />
+            <element signature="e#1823#1830#1" expanded="false" />
+            <element signature="e#2948#2955#1" expanded="false" />
+            <element signature="e#3047#3054#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -365,10 +358,10 @@
         <state relative-caret-position="150">
           <caret line="10" column="88" lean-forward="false" selection-start-line="10" selection-start-column="88" selection-end-line="10" selection-end-column="88" />
           <folding>
-            <element signature="e#1724#1731#1" expanded="true" />
-            <element signature="e#1823#1830#1" expanded="true" />
-            <element signature="e#2948#2955#1" expanded="true" />
-            <element signature="e#3047#3054#1" expanded="true" />
+            <element signature="e#1724#1731#1" expanded="false" />
+            <element signature="e#1823#1830#1" expanded="false" />
+            <element signature="e#2948#2955#1" expanded="false" />
+            <element signature="e#3047#3054#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -388,7 +381,7 @@
         <state relative-caret-position="555">
           <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -479,7 +472,7 @@
         <state relative-caret-position="1185">
           <caret line="84" column="39" lean-forward="false" selection-start-line="84" selection-start-column="39" selection-end-line="84" selection-end-column="39" />
           <folding>
-            <element signature="e#0#27#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -521,10 +514,10 @@
         <state relative-caret-position="440">
           <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
           <folding>
-            <element signature="e#1724#1731#1" expanded="true" />
-            <element signature="e#1823#1830#1" expanded="true" />
-            <element signature="e#2948#2955#1" expanded="true" />
-            <element signature="e#3047#3054#1" expanded="true" />
+            <element signature="e#1724#1731#1" expanded="false" />
+            <element signature="e#1823#1830#1" expanded="false" />
+            <element signature="e#2948#2955#1" expanded="false" />
+            <element signature="e#3047#3054#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -544,14 +537,6 @@
           <folding>
             <element signature="e#0#14#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aggregator/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2066">
-          <caret line="164" column="0" lean-forward="false" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,6 +630,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aggregator/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1758">
+          <caret line="140" column="7" lean-forward="true" selection-start-line="140" selection-start-column="7" selection-end-line="140" selection-end-column="7" />
           <folding />
         </state>
       </provider>
