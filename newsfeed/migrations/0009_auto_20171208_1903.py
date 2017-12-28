@@ -3,22 +3,15 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import taggit.managers
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('taggit', '0002_auto_20150616_2121'),
         ('newsfeed', '0008_auto_20171202_1325'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='eventregistrypost',
-            name='tags',
-            field=taggit.managers.TaggableManager(help_text='A comma-separated list of tags.', through='taggit.TaggedItem', to='taggit.Tag', verbose_name='Tags'),
-        ),
         migrations.AlterField(
             model_name='eventregistrypost',
             name='created_at',
