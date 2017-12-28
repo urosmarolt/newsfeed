@@ -138,10 +138,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#Taggit
-#TAGGIT_CASE_INSENSITIVE = True
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
