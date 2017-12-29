@@ -4,14 +4,18 @@ import redis
 import sys
 import os
 import django
+from urllib.parse import urlparse
+
+
 
 sys.path.append('/Users/uros.marolt/Documents/docker/aggregator/aggregator')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'aggregator.settings'
 django.setup()
 from newsfeed.models import EventregistryPost
+redis_url = urlparse(os.getenv('REDIS_URL'))
 
 try:
-    POOL = redis.ConnectionPool(host='127.0.0.1', port=6379, db=0)
+    POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0)
     print('Connected!')
 except Exception as ex:
     print('Error:', ex)

@@ -184,12 +184,10 @@ elif DJANGO_MODE == 'production':
     from urllib.parse import urlparse
 
     redis_url = urlparse(os.getenv('REDIS_URL'))
-    print(redis_url.hostname)
-    print(redis_url.port)
 
     CONSTANCE_REDIS_CONNECTION = {
-        'host': 'ec2-34-252-120-111.eu-west-1.compute.amazonaws.com',
-        'port': '40229',
+        'host': redis_url.hostname,
+        'port': redis_url.port,
         'db': 0,
     }
 
