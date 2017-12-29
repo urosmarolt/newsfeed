@@ -24,7 +24,6 @@ except Exception as ex:
 def getVariable(variable_name):
     my_server = redis.Redis(connection_pool=POOL)
     response = my_server.get(variable_name)
-    print(response)
     return re.search(r'\[(.*)\]', str(response)).group(1)
 
 
@@ -38,6 +37,8 @@ def pullItems():
         keyword_items = QueryItems.OR([getVariable('constance:EVENTREGISTRY_QUERY')])
     except:
         keyword_items = os.getenv('EVENTREGISTRY_QUERY')
+
+    print(keyword_items)
     q = QueryArticles(keywords=keyword_items, lang="eng")
 
     res = er.execQuery(q)
