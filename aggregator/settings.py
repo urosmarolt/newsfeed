@@ -173,11 +173,16 @@ CONSUMER_SECRET='ahPlFMiORJRv04tY8el5gxmgCtrPUUNo41dLnfdpt5DT1KMTp5'
 #CONSTANCE_BACKEND = 'constance.backends.database.DatabaseBackend'
 CONSTANCE_BACKEND = 'constance.backends.redisd.RedisBackend'
 
-CONSTANCE_REDIS_CONNECTION = {
-    'host': 'localhost',
-    'port': 6379,
-    'db': 0,
-}
+if DJANGO_MODE == 'local' or DJANGO_MODE == 'staging':
+    CONSTANCE_REDIS_CONNECTION = {
+        'host': 'localhost',
+        'port': 6379,
+        'db': 0,
+    }
+elif DJANGO_MODE == 'production':
+    CONSTANCE_REDIS_CONNECTION = {
+        os.getenv('REDIS_URL')
+    }
 
 CONSTANCE_ADDITIONAL_FIELDS = {
     'yes_no_null_select': [
