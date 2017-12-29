@@ -184,6 +184,7 @@ elif DJANGO_MODE == 'production':
     from urllib.parse import urlparse
 
     redis_url = urlparse(os.getenv('REDIS_URL'))
+    print(redis_url)
 
     CONSTANCE_REDIS_CONNECTION = {
         'host': redis_url.hostname,
