@@ -13,7 +13,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'aggregator.settings'
 django.setup()
 from newsfeed.models import EventregistryPost
 redis_url = urlparse(os.getenv('REDIS_URL'))
-print(redis_url.password)
+
 try:
     POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0, password=redis_url.password)
     print('Connected!')
@@ -34,7 +34,10 @@ def pullItems():
 
 
     category = er.getCategoryUri("news")
-    keyword_items = QueryItems.OR([getVariable('constance:EVENTREGISTRY_QUERY')])
+    try:
+        keyword_items = QueryItems.OR([getVariable('constance:EVENTREGISTRY_QUERY')])
+    except:
+        keyword_items = os.getenv('EVENTREGISTRY_QUERY')
     q = QueryArticles(keywords=keyword_items, lang="eng")
 
     res = er.execQuery(q)

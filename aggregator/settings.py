@@ -189,6 +189,7 @@ elif DJANGO_MODE == 'production':
         'host': redis_url.hostname,
         'port': redis_url.port,
         'db': 0,
+        'password': redis_url.password,
     }
 
 CONSTANCE_ADDITIONAL_FIELDS = {
@@ -205,5 +206,5 @@ CONSTANCE_ADDITIONAL_FIELDS = {
 CONSTANCE_CONFIG = {
     'SITE_TITLE': ("FakeNew5!", 'Site title'),
     'TWEETER_KEYWORDS': ("#Tweeter", 'Tweeter search keywords'),
-    'EVENTREGISTRY_QUERY': ("Event registry keyword", 'Eventregistry search keywords'),
+    'EVENTREGISTRY_QUERY': ("Fake News", 'Eventregistry search keywords'),
 }
