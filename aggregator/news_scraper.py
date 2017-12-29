@@ -13,9 +13,9 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'aggregator.settings'
 django.setup()
 from newsfeed.models import EventregistryPost
 redis_url = urlparse(os.getenv('REDIS_URL'))
-print(redis_url)
+print(redis_url.password)
 try:
-    POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0, password='pff2d0b7b8f2249bd322941a82e1d0c0d3ebad5d9ee697574501586bd03968458')
+    POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0, password=redis_url.password)
     print('Connected!')
 except Exception as ex:
     print('Error:', ex)
@@ -23,8 +23,8 @@ except Exception as ex:
 
 def getVariable(variable_name):
     my_server = redis.Redis(connection_pool=POOL)
-    print(my_server)
     response = my_server.get(variable_name)
+    print(response)
     return re.search(r'\[(.*)\]', str(response)).group(1)
 
 
