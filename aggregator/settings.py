@@ -181,7 +181,7 @@ if DJANGO_MODE == 'local' or DJANGO_MODE == 'staging':
         'db': 0,
     }
 elif DJANGO_MODE == 'production':
-    import urlparse
+    from urllib.parse import urlparse
 
     redis_url = urlparse.urlparse(os.environ.get('REDIS_URL'))
 
