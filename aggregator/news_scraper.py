@@ -15,7 +15,7 @@ from newsfeed.models import EventregistryPost
 redis_url = urlparse(os.getenv('REDIS_URL'))
 
 try:
-    POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0)
+    POOL = redis.ConnectionPool(host=redis_url.hostname, port=redis_url.port, db=0, password='pff2d0b7b8f2249bd322941a82e1d0c0d3ebad5d9ee697574501586bd03968458')
     print('Connected!')
 except Exception as ex:
     print('Error:', ex)
