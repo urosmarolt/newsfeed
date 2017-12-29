@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -180,8 +181,14 @@ if DJANGO_MODE == 'local' or DJANGO_MODE == 'staging':
         'db': 0,
     }
 elif DJANGO_MODE == 'production':
+    import urlparse
+
+    redis_url = urlparse.urlparse(os.environ.get('REDIS_URL'))
+
     CONSTANCE_REDIS_CONNECTION = {
-        os.getenv('REDIS_URL')
+        'host': redis_url.hostname,
+        'port': redis_url.port,
+        'db': 0,
     }
 
 CONSTANCE_ADDITIONAL_FIELDS = {
