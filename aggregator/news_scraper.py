@@ -46,7 +46,6 @@ def pullItems():
                                                  articleInfo=ArticleInfoFlags(duplicateList=True, concepts=False,
                                                                               categories=False, location=False,
                                                                               image=True))))
-    print(res['articles']['results'])
     for item in res['articles']['results']:
         try:
             if item["isDuplicate"] == True:
@@ -73,7 +72,7 @@ def pullItems():
                 del item["date"]
                 del item["time"]
 
-                item["tags"] = getVariable('constance:EVENTREGISTRY_QUERY')
+                item["tags"] = keyword_items
 
                 print(item)
 
