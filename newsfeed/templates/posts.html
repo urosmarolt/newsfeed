@@ -13,7 +13,8 @@
                 {% if post.image %}
                     <img src="{{ post.image }}" class="pull-left gap-right align-top-right" width="100px" height="100px" />
                 {% else %}
-                    <img src="/static/images/defaultThumb.png" class="pull-left gap-right align-top-right" width="100px" />
+
+                    <img src="{% static 'images/defaultThumb.png' %}" class="pull-left gap-right align-top-right" width="100px" />
                 {% endif %}
                 <hr class="line-align-left">
                 <p class="newsExtract">{{ post.body|truncatewords:65 }}</p>
