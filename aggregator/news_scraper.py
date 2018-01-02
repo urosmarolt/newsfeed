@@ -38,7 +38,6 @@ def pullItems():
     except:
         keyword_items = os.getenv('EVENTREGISTRY_QUERY')
 
-    print(keyword_items)
     q = QueryArticles(keywords=keyword_items, lang="eng")
 
     res = er.execQuery(q)
@@ -76,7 +75,7 @@ def pullItems():
 
                 item["tags"] = getVariable('constance:EVENTREGISTRY_QUERY')
 
-
+                print(item)
 
                 eventRegistryItem = EventregistryPost()
 
