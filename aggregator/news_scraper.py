@@ -74,7 +74,7 @@ def pullItems():
 
                 item["tags"] = keyword_items
 
-                print(item)
+
 
                 eventRegistryItem = EventregistryPost()
 
@@ -89,7 +89,7 @@ def pullItems():
                 eventRegistryItem.created_at = item["datetime"]
                 eventRegistryItem.tags = item["tags"]
 
-                print(eventRegistryItem)
+                #print(eventRegistryItem)
                 try:
                     eventRegistryItem.save()
                 except Exception as e:
