@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^source/(?P<source_id>\d+)/$', SourcePostList.as_view(), name="posts_by_source"),
     url(r'^sources/', SourceList.as_view(), name="sources"),
     url(r'^(?P<slug>[-\w]+)/$', PostDetail.as_view(), name="post-detail"),
+    url('', include('pwa.urls')),  # You MUST use an empty string as the URL prefix
 ]
 
 

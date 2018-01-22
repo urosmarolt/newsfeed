@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'newsfeed',
     'constance',
     'sitetree',
+    'pwa',
 ]
 
 if DJANGO_MODE == 'local':
@@ -208,3 +209,31 @@ CONSTANCE_CONFIG = {
     'TWEETER_KEYWORDS': ("#Tweeter", 'Tweeter search keywords'),
     'EVENTREGISTRY_QUERY': ("Fake News", 'Eventregistry search keywords'),
 }
+
+
+#PWA Manifesto Settngs
+PWA_APP_NAME = 'FakeNew5!'
+PWA_APP_DESCRIPTION = "FakeNew5!"
+PWA_APP_THEME_COLOR = '#0A0302'
+PWA_APP_ICONS = [
+    {
+        "src": "/static/manifest/launcher-icon-1x.png",
+        "type": "image/png",
+        "sizes": "48x48"
+    },
+    {
+        "src": "/static/manifest/launcher-icon-2x.png",
+        "type": "image/png",
+        "sizes": "96x96"
+    },
+    {
+        "src": "/static/manifest/launcher-icon-4x.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    }
+]
+PWA_APP_START_URL = '/'
+PWA_APP_SCOPE = '/'
+PWA_APP_DISPLAY = 'standalone'
+PWA_APP_ORIENTATION = 'portrait'
+PWA_SERVICE_WORKER_PATH = os.path.join('aggregator', 'serviceworker.js')
