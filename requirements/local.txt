@@ -1,6 +1,6 @@
 -r base.txt
 
-certifi==2017.11.5
+certifi==2022.12.7
 chardet==3.0.4
 django-constance==2.0.0
 django-debug-toolbar==1.9.1
